@@ -57,8 +57,7 @@ const Carousel = styled.div`
 const Image = styled.img`
   width: 100%;
   max-width: 100%; /* Asegura que la imagen no se estire más de su contenedor */
- height: auto; /* Asegura que la imagen mantenga su proporción */
-  max-height: 690px;
+  height: 500px;
   border-radius: 10px;
   transition: transform 0.5s;
 `;
