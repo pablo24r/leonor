@@ -18,6 +18,7 @@ const Card = styled.div`
   border-radius: 10px;
   width: 100%;
   max-width: 600px;
+  max-height: 800px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
@@ -57,7 +58,7 @@ const Image = styled.img`
   width: 100%;
   max-width: 100%; /* Asegura que la imagen no se estire más de su contenedor */
  height: auto; /* Asegura que la imagen mantenga su proporción */
-  max-height: 50%; /* Ajusta la altura máxima de la imagen al 50% del contenedor */
+  max-height: 690px;
   border-radius: 10px;
   transition: transform 0.5s;
 `;
