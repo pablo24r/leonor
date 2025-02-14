@@ -95,6 +95,7 @@ function App() {
   const [currentImage, setCurrentImage] = useState(0);
   const [isPressed, setIsPressed] = useState(false); // Para controlar si la imagen está siendo presionada
   const [timeLeft, setTimeLeft] = useState(100); // Estado para la duración de la barra de progreso
+  const [gifLeo, setGifLeo] = useState(false);
 
   const images = [
     '/images/2.jpeg',
@@ -176,6 +177,12 @@ function App() {
     setButtonScale((prevScale) => prevScale + 0.2); // Hace más grande el botón
   };
 
+  const handleGif = () => {
+    setShowGif(false);
+    setShowButtons(false);
+    setGifLeo(true);
+  };
+
   const handleImageClick = () => {
     if (!isPressed) {
       setCurrentImage((prev) => (prev + 1) % images.length); // Cambia la imagen al hacer clic
@@ -201,6 +208,7 @@ function App() {
           <>
             <Button onClick={handleYesClick} scale={buttonScale}>CLARO!!!</Button>
             <Button onClick={handleNoClick}>NO, te odio</Button>
+            <Button onClick={handleGif}>🤣🤣🤣🤣</Button>
           </>
         )}
         {carouselVisible && (
@@ -219,6 +227,14 @@ function App() {
             <h1>Y yo cariño!!! 😘</h1>
           </>
         )}
+        {gifLeo &&
+          (
+            <div>
+              <Gif src="/images/leo.gif" alt="Gif de Leo" />
+              <Button onClick={() => window.location.reload()}>🎪</Button>
+              </div>
+          )
+        }
       </Card>
     </Container>
   );
